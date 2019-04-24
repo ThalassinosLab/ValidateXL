@@ -183,7 +183,7 @@ def get_seq_id(clean_dfs, fasta_file):
     return clean_dfs
 
 
-def validated_results(df_list, energies):
+def validated_results(df_list, energies, path):
     """
     Validates only the highest scoring
     identification for a particual crosslink based on sequence id. 
