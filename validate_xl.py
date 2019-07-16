@@ -296,7 +296,7 @@ def csv_output(validated_dfs, manual_dfs, rejected_dfs, path, energies):
 if __name__ == "__main__":
     fasta_path = "/Users/juliette/Dropbox/PhD/data/7_fastas/"
     fasta_file = os.path.join(fasta_path, "BSA.fasta")
-    xml_path = "/Users/juliette/Dropbox/PhD/data/13_software/validatexl"
+    xml_path = "/Users/juliette/Dropbox/PhD/data/13_software/validatexl/"
     energies = [
         'HD_1', 'HDiTRAQ_1', 'Def_1', 'DefiTRAQ_1','Low_1', 'Wide_1',
         'HD_2', 'HDiTRAQ_2', 'Def_2', 'DefiTRAQ_2','Low_2', 'Wide_2',
@@ -327,6 +327,6 @@ if __name__ == "__main__":
     format_dfs = clean_xml_data(create_df, energies)
     abspos_dfs = get_seq_id(format_dfs, fasta_file)
     validated_dfs, manual_dfs, rejected_dfs = validated_results(
-        abspos_dfs, energies
+        abspos_dfs, energies, xml_path
     )
     csv_output(validated_dfs, manual_dfs, rejected_dfs, xml_path, energies)
